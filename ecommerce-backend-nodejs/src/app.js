@@ -16,11 +16,7 @@ require('./dbs/init.mongodb.v2')
 const {checkOverload} = require("./helpers/check.connect")
 //checkOverload()
 // init routes
-app.get("/", (req, res, next) => {
-    return res.status(500).json({
-        message: "Welcome"
-    })
-})
+app.use('', require("./routes/index.route"))
 
 
 // handling error
